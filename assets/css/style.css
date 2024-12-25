@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", serif;
+}
+
+header{
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 9;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    height: 70px;
+    padding: 0px 50px;
+    backdrop-filter: blur(3px);
+    width: 100%;
+}
+
+#btn-open-menu-mobile{
+    display: none;
+    position: absolute;
+    left: 20px;
+    font-size: 24px;
+    border: none;
+    background-color: transparent;
+    color: #fff;
+    cursor: pointer;
+    z-index: 99;
+
+}
+/* navegacao */
+.header-nav{
+    margin-left: 50px;
+    display: flex;
+    gap: 20px;  
+}
+.header-nav a{
+    text-decoration: NONE;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 16px;
+    color: wheat    ;
+    cursor: pointer;
+    padding: 10px;
+    /* transition: all 1s; */
+}
+.header-nav a:hover{
+    border-bottom: 2px solid wheat;
+}
+.header-nav    ion-icon{
+    font-size: 20px;
+    color: rgb(250, 241, 226);
+}
+/* logo */
+.header-logo{
+    width: 200px;
+}
+/* social */
+.header-social{
+    display: flex;
+    gap: 30px;
+    margin-left: auto;
+}
+.header-social ion-icon{
+    display: flex;
+    color: #fff;
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.header-social ion-icon:hover{
+    background-color: rgba(255, 255, 255, 0.094);
+}
+.main-conteudo-principal{
+    position: relative;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    /* background-image: url("../img/twd-background.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat; */
+}
+
+.img-background{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.body-content{
+    color: #fff;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 50px;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.container-info-twd{
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+}
+.twd-assitir-agora-btn{
+    width: 200px;
+    padding: 15px;
+    border: none;
+    background-color: rgb(181, 165, 135) ;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+}
+.twd-assitir-agora-btn:hover{
+    opacity: 0.8;
+}
+.container-info-twd{
+    width: 100%;
+    max-width: 550px;
+}
+.twd-sinopse{
+}
+.twd-serie{
+    font-weight: 600;
+    color: rgb(223, 222, 222);
+    border-left: 3px solid wheat;
+    padding: 0px 10px;
+}
+.twd-info{
+    color: rgb(249, 249, 249);
+    display: flex;
+    gap: 10px;
+}
+
+.twd-info p{
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.4);
+}
+.img-icon-4k{
+    width: 100px;
+}
+
+#menu-mobile{
+    display: none;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    position: absolute;
+    width: 250px;
+    margin-left: -250px;
+    background-color: #0000009f;
+    z-index: 8;
+    /* justify-content: center; */
+    align-items: center;
+    padding-top: 70px;
+    flex-direction: column;
+    backdrop-filter: blur(3px);
+
+    transition: margin-left 0.5s ease; /* Transição suave para entrada e saída */
+    
+}
+.nav-mobile, .social-mobile{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    width: 100%;
+}
+.nav-mobile a{
+    border-radius: 2px;
+    background-color: rgba(245, 222, 179, 0.089);
+    padding: 8px;
+    text-decoration: none;
+    color: wheat;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+#menu-mobile >p{
+    color: wheat;
+}
+
+.nav-mobile ion-icon{
+    font-size: 24px;
+}
+.social-mobile p{
+    color: white;
+}
+.social-mobile ion-icon{
+    color: #fff;
+    font-size: 34px;
+}
+/* media query */
+@media(max-width: 720px){
+    header{
+        justify-content: center;
+    }
+    .header-nav{
+        display: none;
+    }
+    .header-social{
+        display: none;
+    }
+    #btn-open-menu-mobile{
+        display: flex;
+    }
+    #menu-mobile{
+        display: flex;
+    }
+}
+@media(max-width: 360px){
+    .twd-serie{
+        font-size: 14px;
+    }
+}
